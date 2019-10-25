@@ -1,0 +1,29 @@
+
+文件夹：
+	dataset是原始数据，
+	output是处理后的数据。
+
+文件：
+	data_error:在读电抗器数据时，所遇到的错误，以及简单处理。
+
+源代码：
+	data_excel.py 读取原始数据，并且存储到output文件夹下面(其标签为数据文件名)
+	eg：
+		750kV凤乌高抗A相.csv
+
+	fft.py 是将读到的原始数据做fft变换（10个周期，125000个数据做fft）
+	eg：
+		750kV凤乌高抗A相_10fft.csv
+
+	fft.picture.py 将数据的基频点和倍频点分离出来，做图并且将结果存储到  10_fft  文件夹中。
+
+
+	freq_point.py将fft数据中的，基频和倍频点的增益找出来，单独存到一个csv文件中。
+	eg：
+		750kV凤乌高抗A相_fft_point.csv
+
+	freq_point_standard.py 将倍频点的增益读出来，并且一100hz为基频，进行归一化。
+ 	eg：
+		750kV凤乌高抗A相_fft_point_standard.csv
+
+
